@@ -1,0 +1,9 @@
+[INFO ] 2021-05-06 23:11:40.957 [main] Log4jclass - This is inf message
+[ERROR] 2021-05-06 23:11:40.962 [main] Log4jclass - This is a error message
+[WARN ] 2021-05-06 23:11:40.963 [main] Log4jclass - This is a warning message
+[FATAL] 2021-05-06 23:11:40.963 [main] Log4jclass - This is a FATAL message
+[TRACE] 2021-05-06 23:42:38.625 [main] Log4jclass - Trace message
+[INFO ] 2021-05-06 23:42:38.629 [main] Log4jclass - This is inf message
+[ERROR] 2021-05-06 23:42:38.629 [main] Log4jclass - This is a error message
+[WARN ] 2021-05-06 23:42:38.629 [main] Log4jclass - This is a warning message
+[FATAL] 2021-05-06 23:42:38.629 [main] Log4jclass - This is a FATAL message
