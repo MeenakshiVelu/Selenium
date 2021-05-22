@@ -3,15 +3,15 @@ import java.util.HashMap;
 public class foobas {
 
 	public static void main(String[] args) {
-		System.out.println("Values");
-		System.out.println(solution("code"));
+
+		System.out.println(solution("Braille"));
 
 	}
 
 	public static String solution(String s) {
 		String op="";
 		HashMap<String, String> alphabets = new HashMap<String, String>();
-
+	
 		alphabets.put("a", "100000");
 		alphabets.put("b", "110000");
 		alphabets.put("c", "100100");
@@ -20,7 +20,7 @@ public class foobas {
 		alphabets.put("f", "110100");
 		alphabets.put("g", "110110");
 		alphabets.put("h", "110010");
-		alphabets.put("i", "011000");
+		alphabets.put("i", "010100");
 		alphabets.put("j", "010110");
 		alphabets.put("k", "101000");
 		alphabets.put("l", "111000");
@@ -41,29 +41,12 @@ public class foobas {
 		alphabets.put(" ", "000000");
 
 		for(int i=0;i<s.length();i++) {
-			for (String j: alphabets.keySet()) {
-				System.out.println(s.charAt(i));
-				//System.out.println(alphabets.get(i));
-
-				if(Character.isUpperCase(s.charAt(i) )) {
-					System.out.println("hhhhh");
-					//op.concat("000001");
-					op=op+"000001";
-
-					op.concat(alphabets.get(j));
-
-
-				}
-				else {
-					op.concat(alphabets.get(i));
-
-
-				}
-
+			if(Character.isUpperCase(s.charAt(i) ))
+			{				
+				op=op+"000001"+ alphabets.get(String.valueOf(s.charAt(i)) .toLowerCase());
 			}
-			for (String j: alphabets.keySet()) {
-				//System.out.println("key: " + j + " value: " + alphabets.get(j));
-
+			else {
+				op=op+ alphabets.get(String.valueOf(s.charAt(i) ));
 			}
 		}
 
@@ -72,3 +55,8 @@ public class foobas {
 
 	}
 }
+
+//100100101010100110100010- code
+
+//000001110000111010100000010100111000111000100010-Braille
+//000001110000111010100000010100111000111000100010
